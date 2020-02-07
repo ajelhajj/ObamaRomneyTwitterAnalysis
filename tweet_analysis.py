@@ -1,5 +1,3 @@
-# Homework 04 Problems 1+
-# Andrea Elhajj
 import json
 import gzip
 import string 
@@ -18,7 +16,7 @@ try:
     tweet_list = open('twitter_data.txt').read().splitlines()
     
 except IOError: # if file does not exist, then create it
-    filename = "HW04_twitterData.json.txt.gz"
+    filename = "twitterData.json.txt.gz"
     for line in gzip.open(filename , 'rt', encoding='utf-8'):
         if line[0] != '{': # If missing curly brace at beginning of object
             line = '{' + line
@@ -47,7 +45,6 @@ for tweet in tweet_list:
     if ('mitt' or 'romney') in str.lower(tweet):
         R_corpus.append(tweet)
 
-# Problem 2
 # Initialize lists for date - H (chop off the minutes and seconds characters 
 # from the "created_at" string before you parse it into a date)
 O_date_h = []
@@ -84,7 +81,6 @@ for i in range(latest_hour + 1): # Establish range of hours to look for and get 
     f.write(str(i) + ' ' + str(O_h.count(i)) + ' ' + str(R_h.count(i)) + '\n')
 f.close()
 
-# Problem 3
 # Initialize lists to hold words
 O_words = []
 R_words = []
