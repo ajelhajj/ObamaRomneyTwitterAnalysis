@@ -1,5 +1,5 @@
 # plotter_p2.py
-# Jim Bagrow
+# Andrea
 
 # DO NOT MODIFY THIS FILE
 
